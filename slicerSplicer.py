@@ -20,7 +20,10 @@ def extract_sections(input_lines):
                     break
 
             current_section = stripped_line[1:colon_position].lower()
-            sections[current_section].append(line)
+            if current_section in SECTIONS:
+                sections[current_section].append(line)
+            else:
+                break
         elif current_section in SECTIONS:
             sections[current_section].append(line)
 

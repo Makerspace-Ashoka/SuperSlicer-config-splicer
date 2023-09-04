@@ -17,16 +17,13 @@ def split_ini_files(input_filenames):
                 stripped_line = line.strip()
                 if stripped_line.startswith("[") and stripped_line.endswith("]"):
                     match = re.search(keyword, stripped_line)
-                    print(match)
 
                     if match:
                         section_checker = True
-                        print("its a match")
                         sections.append(line)
 
                     else:
                         section_checker = False
-                        print("unmatched")
 
                 elif section_checker == True:
                     sections.append(line)
