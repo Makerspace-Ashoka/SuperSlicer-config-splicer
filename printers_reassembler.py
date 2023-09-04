@@ -46,5 +46,10 @@ def write_sections(keys, file_title):
 
 
 if __name__ == "__main__":
-    input_filenames = ["print.ini", "printer.ini", "filament.ini"]
+    input_filenames = [
+        "print.ini",
+        "printer.ini",
+        "filament.ini",
+        "physical_printer.ini",
+    ]
     split_ini_files(input_filenames)
