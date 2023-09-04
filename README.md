@@ -6,14 +6,14 @@ It needs every section in the config to be flagged with the name of the relevant
 
 ## Slicer Config Development Workflow
 
-:::mermaid
-graph TD;
-A[MakerSpace config bundle] --> B[Internal Development];
-A --> C[Forked User setup];
-C --> D[User development and configuration];
-D --> E[Post processing using slicerSplicer.py];
-E --> F[Reassembly using printers_reassembler.py];
-F -- Pull request --> G[Internal comparison/validation];
-B --> G;
-G --> H[Pushed/Pulled updated config]
-:::
+```mermaid
+    graph TD
+      A[MakerSpace config bundle]-->B[Internal Development]
+      A-->C[Forked User setup]
+      C-->D[User development and configuration]
+      D-->E[Post processing using slicerSplicer.py]
+      E-->F[Reassembly using printers_reassembler.py]
+      F--Pull request--> G[Internal comparison/validation]
+      B-->G
+      G-->H[Pushed/Pulled updated config]
+```
